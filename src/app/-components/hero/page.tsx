@@ -3,6 +3,7 @@ import Image from "next/image";
 import leftShape from "@/../public/assets/img/hero/left-shape2.png";
 import AboutSection from "../about/AboutSection";
 import ShopSection from "../shop/page";
+import FAQSection from "../faq/faq";
 
 export default function HeroSection() {
   return (
@@ -118,6 +119,7 @@ export default function HeroSection() {
       </div>
       <AboutSection />
       <ShopSection />
+      <FAQSection />
     </>
   );
 }
