@@ -17,9 +17,9 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-30 w-full p-2 sm:p-4">
+    <header className="absolute top-0 left-0 right-0 z-50 w-full p-2 sm:p-4">
       <div className="mx-auto max-w-[95%] sm:max-w-[90%] lg:max-w-[80%]">
-        <nav className="bg-white/20 backdrop-blur-md border border-white/20 rounded-xl sm:rounded-2xl px-4 sm:px-6 lg:px-8 py-3 sm:py-4 shadow-lg">
+        <nav className="md:bg-white/20 backdrop-blur-md border border-white/20 rounded-xl sm:rounded-2xl px-4 sm:px-6 lg:px-8 py-3 sm:py-4 shadow-lg  ">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center shadow-lg flex-shrink-0">

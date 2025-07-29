@@ -4,6 +4,9 @@ import leftShape from "@/../public/assets/img/hero/left-shape2.png";
 import AboutSection from "../about/AboutSection";
 import ShopSection from "../shop/page";
 import FAQSection from "../faq/faq";
+import TestimonialSlider from "../testimonials/testimonial";
+import BlogSection from "../blog/blog";
+import Footer from "../footer/footer";
 
 export default function HeroSection() {
   return (
@@ -120,6 +123,9 @@ export default function HeroSection() {
       <AboutSection />
       <ShopSection />
       <FAQSection />
+      <TestimonialSlider />
+      <BlogSection />
+      <Footer />
     </>
   );
 }
