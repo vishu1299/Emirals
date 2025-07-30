@@ -39,19 +39,13 @@ export default function HeroSection() {
               {/* Left Content */}
               <div className="w-full lg:w-2/3 xl:w-4/5 space-y-6 sm:space-y-8 lg:space-y-10 text-center lg:text-left">
                 <div className="space-y-6 sm:space-y-8">
-                  <span className=" text-white text-xs sm:text-sm font-semibold tracking-wide">
-                    IT Technology
-                  </span>
-
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[88px] font-extrabold text-white leading-tight">
-                    Tech Solutions
-                    <br />
-                    <span className="text-white font-medium">
-                      For Every Need
-                    </span>
-                    <br />
-                    <span className="text-[#25C331]">Potential</span>
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[88px] font-extrabold text-white leading-tight flex gap-4">
+                    EMIRAL
+                    <span className="text-[#25C331]">GLOBAL</span>
                   </h1>
+                  <span className=" text-white text-lg sm:text-3xl font-semibold tracking-wide">
+                    Your holistic wellness and lifestyle partner
+                  </span>
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6">

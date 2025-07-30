@@ -250,7 +250,7 @@ export default function ShopSection() {
           <div className="relative">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
               <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
-                Premium Design
+                Premium Emiral
               </span>
               <br />
               <span className="bg-gradient-to-r from-[#25C331] via-[#1ea82a] to-[#25C331] bg-clip-text text-transparent relative">

@@ -6,9 +6,9 @@ import about from "@/../public/assets/img/Abstractnetworking.jpg";
 
 export default function AboutSection() {
   const features = [
-    "Continually engineer ethical partnership",
-    "Seamlessly pursue orthogonal customer service",
-    "Dynamically reconceptualize value",
+    "To promote Fit, Healthy, and Wealthier individuals by creating quality holistic wellness products.",
+    "Emiral is a natural herbal products company that creates an ecosystem for network users to promote healthy living and wealth",
+    "Strategic partnership",
   ];
 
   return (
@@ -26,18 +26,21 @@ export default function AboutSection() {
             </Badge>
 
             {/* Main Heading */}
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-              Discover the Most Expertise
+            <h2 className="text-3xl sm:text-4xl  font-bold text-gray-900 leading-tight">
+              Discover The Expertise
               <br />
-              <span className="text-gray-600">of Our</span>{" "}
-              <span className="text-[#25C331]">IT Agency</span>
+              <span className="text-gray-900">Of Our</span>{" "}
+              <span className="text-[#25C331]">Emiral Products</span>
             </h2>
 
             {/* Description */}
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Ullamcorper risus ultrices risus lorem. Mollis libero in
-              pellentesque potenti. Vulputate ut aliquam, consectetur turpis
-              odio.
+            <p className="text-lg text-gray-600 leading-relaxed text-justify">
+              Emiral Elixir is a 100% natural immune booster designed to detox,
+              burn fat, and support overall health.
+              <br />
+              It helps with conditions like stroke, fibroids, cancer, diabetes,
+              high blood pressure, liver and kidney diseases, cholesterol, and
+              ulcers.
             </p>
 
             {/* Features List */}
