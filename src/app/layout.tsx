@@ -1,7 +1,8 @@
 import type React from "react";
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "./-components/header/page";
+import Navbar from "./components/header/page";
+import Footer from "./components/footer/footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +17,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Font Awesome CDN */}
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -33,6 +33,10 @@ export default function RootLayout({
 
         {/* Add padding-top to prevent content from being hidden behind navbar */}
         <div className="">{children}</div>
+
+        <div className="">
+          <Footer />
+        </div>
       </body>
     </html>
   );

@@ -4,16 +4,17 @@ import { useState } from "react";
 import { Menu, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import logo from "@/../public/assets/img/logo/logo.png";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", hasDropdown: false },
-    { name: "About", hasDropdown: false },
-    { name: "Shop", hasDropdown: false },
-    { name: "Plans", hasDropdown: false },
-    { name: "Blogs", hasDropdown: false },
+    { name: "Home", hasDropdown: false, href: "/" },
+    { name: "About", hasDropdown: false, href: "/about" },
+    { name: "Shop", hasDropdown: false, href: "/shops" },
+    { name: "Plans", hasDropdown: false, href: "/plan" },
+    { name: "Blogs", hasDropdown: false, href: "/blogs" },
   ];
 
   return (
@@ -37,12 +38,16 @@ export default function Navbar() {
               <div className="flex items-center space-x-8 xl:space-x-12">
                 {navItems.map((item) => (
                   <div key={item.name} className="relative group">
-                    <button className="flex items-center space-x-1 text-white hover:text-gray-300 transition-colors duration-200 text-shadow">
-                      <span className="font-medium text-sm xl:text-base">
-                        {item.name}
-                      </span>
-                      {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
-                    </button>
+                    <Link href={item.href}>
+                      <button className="flex items-center space-x-1 text-white hover:text-gray-300 transition-colors duration-200 text-shadow">
+                        <span className="font-medium text-sm xl:text-base">
+                          {item.name}
+                        </span>
+                        {item.hasDropdown && (
+                          <ChevronDown className="w-4 h-4" />
+                        )}
+                      </button>
+                    </Link>
                   </div>
                 ))}
               </div>
@@ -76,13 +81,12 @@ export default function Navbar() {
               <div className="flex flex-col space-y-3">
                 {/* Navigation Items */}
                 {navItems.map((item) => (
-                  <button
-                    key={item.name}
-                    className="flex items-center justify-between text-white hover:text-gray-300 transition-colors duration-200 py-3 px-3 rounded-lg hover:bg-white/10 text-left"
-                  >
-                    <span className="font-medium text-base">{item.name}</span>
-                    {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
-                  </button>
+                  <Link key={item.name} href={item.href}>
+                    <button className="flex items-center justify-between text-white hover:text-gray-300 transition-colors duration-200 py-3 px-3 rounded-lg hover:bg-white/10 text-left">
+                      <span className="font-medium text-base">{item.name}</span>
+                      {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
+                    </button>
+                  </Link>
                 ))}
 
                 {/* Mobile Auth Buttons */}

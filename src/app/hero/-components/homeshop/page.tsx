@@ -19,14 +19,15 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 // Import product images
-import calendarImg from "@/../public/assets/img/product/01.jpg";
+import calendarImg from "@/../public/assets/img/product/envato-labs-image-edit.png";
 import notebookImg from "@/../public/assets/img/product/02.jpg";
 import stickerImg from "@/../public/assets/img/product/03.jpg";
-import businessCardImg from "@/../public/assets/img/product/04.jpg";
+import businessCardImg from "@/../public/assets/img/product/envato-labs-image-edit.png";
 import brochureImg from "@/../public/assets/img/product/05.jpg";
 import logoImg from "@/../public/assets/img/product/06.jpg";
-import posterImg from "@/../public/assets/img/product/07.jpg";
+import posterImg from "@/../public/assets/img/product/envato-labs-image-edit.png";
 import packagingImg from "@/../public/assets/img/product/08.jpg";
+import Link from "next/link";
 
 export default function ShopSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -522,16 +523,20 @@ export default function ShopSection() {
         </div>
 
         {/* Enhanced View All Products Button */}
-        <div
-          className={`text-center mt-8 sm:mt-12 transition-all duration-1000 delay-500 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          <Button className="bg-gradient-to-r from-[#25C331] to-[#1ea82a] hover:from-[#1ea82a] hover:to-[#25C331] text-white px-6 sm:px-8 lg:px-10 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base lg:text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-0 relative overflow-hidden group">
-            <span className="relative z-10">View All Products</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-          </Button>
-        </div>
+        <Link href="/shop">
+          <div
+            className={`text-center mt-8 sm:mt-12 transition-all duration-1000 delay-500 ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
+            }`}
+          >
+            <Button className="bg-gradient-to-r from-[#25C331] to-[#1ea82a] hover:from-[#1ea82a] hover:to-[#25C331] text-white px-6 sm:px-8 lg:px-10 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base lg:text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-0 relative overflow-hidden group">
+              <span className="relative z-10">View All Products</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+            </Button>
+          </div>
+        </Link>
       </div>
 
       {/* Custom CSS for animations */}

@@ -54,47 +54,6 @@ export default function AboutSection() {
                 </div>
               ))}
             </div>
-
-            {/* Trust Section */}
-            <div className="flex flex-col lg:flex-row gap-3 lg:items-center space-x-6 pt-6">
-              {/* Profile Images */}
-              <div className="flex -space-x-3">
-                <Image
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face"
-                  alt="Team member 1"
-                  width={48}
-                  height={48}
-                  className="w-12 h-12 rounded-full border-3 border-white shadow-lg object-cover"
-                />
-                <Image
-                  src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=face"
-                  alt="Team member 2"
-                  width={48}
-                  height={48}
-                  className="w-12 h-12 rounded-full border-3 border-white shadow-lg object-cover"
-                />
-                <Image
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face"
-                  alt="Team member 3"
-                  width={48}
-                  height={48}
-                  className="w-12 h-12 rounded-full border-3 border-white shadow-lg object-cover"
-                />
-                <div className="w-12 h-12 bg-gray-100 rounded-full border-3 border-white shadow-lg flex items-center justify-center">
-                  <span className="text-gray-900 text-sm font-semibold">
-                    +3M
-                  </span>
-                </div>
-              </div>
-
-              {/* Trust Text */}
-              <div>
-                <p className="text-gray-900 font-semibold text-lg">
-                  AI Over 3M+ People Trusted
-                </p>
-                <p className="text-gray-600">around the World.</p>
-              </div>
-            </div>
           </div>
 
           {/* Right Side - Completely Redesigned */}

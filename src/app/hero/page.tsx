@@ -1,12 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import leftShape from "@/../public/assets/img/hero/left-shape2.png";
-import AboutSection from "../about/AboutSection";
-import ShopSection from "../shop/page";
-import FAQSection from "../faq/faq";
-import TestimonialSlider from "../testimonials/testimonial";
-import BlogSection from "../blog/blog";
-import Footer from "../footer/footer";
+import AboutSection from "./-components/about/AboutSection";
+import ShopSection from "./-components/homeshop/page";
+import FAQSection from "./-components/faq/faq";
+import TestimonialSlider from "./-components/testimonials/testimonial";
+import BlogSection from "./-components/blog/blog";
 
 export default function HeroSection() {
   return (
@@ -114,12 +113,11 @@ export default function HeroSection() {
           </div>
         </main>
       </div>
-      <AboutSection />
+      <AboutSection/>
       <ShopSection />
       <FAQSection />
       <TestimonialSlider />
       <BlogSection />
-      <Footer />
     </>
   );
 }

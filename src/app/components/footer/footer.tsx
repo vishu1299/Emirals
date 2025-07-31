@@ -2,11 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {  Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import logo from "@/../public/assets/img/logo/logo.png";
 
 export default function Footer() {
-
   const quickLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
@@ -14,8 +13,6 @@ export default function Footer() {
     { name: "Plans", href: "/plans" },
     { name: "Blogs", href: "/blogs" },
   ];
-
- 
 
   return (
     <footer className="bg-gray-900 text-white relative overflow-hidden flex justify-center items-center">
@@ -129,7 +126,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm text-center md:text-left">
-              © All Right Reserved By Emiral. Develop by{" "}
+              © All Right Reserved By Emiral. Developed by{" "}
               <span className="text-blue-500">
                 <Link target="_blank" href="https://www.xcrino.com/">
                   Xcrino
