@@ -18,7 +18,7 @@ export default function HeroSection() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/assets/img/hero/hero-3.jpg')`,
+            backgroundImage: `url('/assets/img/hero/hello.png')`,
           }}
         ></div>
 
@@ -113,7 +113,7 @@ export default function HeroSection() {
           </div>
         </main>
       </div>
-      <AboutSection/>
+      <AboutSection />
       <ShopSection />
       <FAQSection />
       <TestimonialSlider />
