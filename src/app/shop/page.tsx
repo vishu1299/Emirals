@@ -1,15 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import {
-  Search,
-  Star,
-  Heart,
-  Eye,
-  ShoppingCart,
-  Grid3X3,
-  List,
-} from "lucide-react";
+import { Search, Star, Heart, Eye, ShoppingCart } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -28,13 +20,13 @@ import { useRouter } from "next/navigation";
 
 // Import product images
 import calendarImg from "@/../public/assets/img/product/envato-labs-image-edit.png";
-import notebookImg from "@/../public/assets/img/product/02.jpg";
-import stickerImg from "@/../public/assets/img/product/03.jpg";
-import businessCardImg from "@/../public/assets/img/product/04.jpg";
-import brochureImg from "@/../public/assets/img/product/05.jpg";
-import logoImg from "@/../public/assets/img/product/06.jpg";
-import posterImg from "@/../public/assets/img/product/07.jpg";
-import packagingImg from "@/../public/assets/img/product/08.jpg";
+import notebookImg from "@/../public/assets/img/product/e1.png";
+import stickerImg from "@/../public/assets/img/product/e2.png";
+import businessCardImg from "@/../public/assets/img/product/envato-labs-image-edit (1).png";
+import brochureImg from "@/../public/assets/img/product/envato-labs-image-edit.png";
+import logoImg from "@/../public/assets/img/product/e2.png";
+import posterImg from "@/../public/assets/img/product/envato-labs-image-edit (1).png";
+import packagingImg from "@/../public/assets/img/product/e1.png";
 
 export default function ShopPage() {
   const router = useRouter();
@@ -44,7 +36,6 @@ export default function ShopPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 9;
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -310,7 +301,7 @@ export default function ShopPage() {
 
       {/* Shop Content */}
       <section ref={sectionRef} className="py-16 sm:py-20 lg:py-24">
-        <div className="w-[90%] mx-auto px-4 sm:px-6 md:px-8 lg:px-8">
+        <div className="w-[95%] mx-auto px-4 sm:px-6 md:px-8 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
             {/* Sidebar Filters */}
             <div className="lg:w-1/4 space-y-6">
@@ -406,39 +397,11 @@ export default function ShopPage() {
                 <p className="text-gray-600">
                   Showing {filteredProducts.length} of {products.length} results
                 </p>
-                <div className="flex items-center gap-4">
-                  <div className="flex bg-white rounded-lg shadow-sm border">
-                    <button
-                      onClick={() => setViewMode("grid")}
-                      className={`p-2 rounded-l-lg transition-all ${
-                        viewMode === "grid"
-                          ? "bg-[#25c331] text-white"
-                          : "text-gray-600 hover:bg-gray-100"
-                      }`}
-                    >
-                      <Grid3X3 className="w-4 h-4" />
-                    </button>
-                    <button
-                      onClick={() => setViewMode("list")}
-                      className={`p-2 rounded-r-lg transition-all ${
-                        viewMode === "list"
-                          ? "bg-[#25c331] text-white"
-                          : "text-gray-600 hover:bg-gray-100"
-                      }`}
-                    >
-                      <List className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
               </div>
 
               {/* Products */}
               <div
-                className={`grid gap-6 ${
-                  viewMode === "grid"
-                    ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-                    : "grid-cols-1"
-                }`}
+                className={`grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6`}
               >
                 {currentProducts.map((product, index) => (
                   <div

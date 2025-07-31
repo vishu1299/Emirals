@@ -20,13 +20,13 @@ import Image from "next/image";
 
 // Import product images
 import calendarImg from "@/../public/assets/img/product/envato-labs-image-edit.png";
-import notebookImg from "@/../public/assets/img/product/02.jpg";
-import stickerImg from "@/../public/assets/img/product/03.jpg";
+import notebookImg from "@/../public/assets/img/product/envato-labs-image-edit (1).png";
+import stickerImg from "@/../public/assets/img/product/e1.png";
 import businessCardImg from "@/../public/assets/img/product/envato-labs-image-edit.png";
-import brochureImg from "@/../public/assets/img/product/05.jpg";
-import logoImg from "@/../public/assets/img/product/06.jpg";
+import brochureImg from "@/../public/assets/img/product/e2.png";
+import logoImg from "@/../public/assets/img/product/envato-labs-image-edit (1).png";
 import posterImg from "@/../public/assets/img/product/envato-labs-image-edit.png";
-import packagingImg from "@/../public/assets/img/product/08.jpg";
+import packagingImg from "@/../public/assets/img/product/e1.png";
 import Link from "next/link";
 
 export default function ShopSection() {

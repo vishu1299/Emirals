@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Check, Award, Users, TrendingUp } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import about from "@/../public/assets/img/Abstractnetworking.jpg";
+import about from "@/../public/assets/img/product/e2.png";
 
 export default function AboutSection() {
   const features = [

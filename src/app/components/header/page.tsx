@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { Menu, ChevronDown } from "lucide-react";
 import Image from "next/image";
@@ -12,8 +11,8 @@ export default function Navbar() {
   const navItems = [
     { name: "Home", hasDropdown: false, href: "/" },
     { name: "About", hasDropdown: false, href: "/about" },
-    { name: "Shop", hasDropdown: false, href: "/shops" },
-    { name: "Plans", hasDropdown: false, href: "/plan" },
+    { name: "Shop", hasDropdown: false, href: "/shop" },
+    { name: "Plans", hasDropdown: false, href: "/plans" },
     { name: "Blogs", hasDropdown: false, href: "/blogs" },
   ];
 
