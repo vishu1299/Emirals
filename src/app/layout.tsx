@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/header/page";
 import Footer from "./components/footer/footer";
+import ToastProvider from "./components/ToastProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -32,7 +33,9 @@ export default function RootLayout({
         </div>
 
         {/* Add padding-top to prevent content from being hidden behind navbar */}
-        <div className="">{children}</div>
+        <div className="">
+          {children} <ToastProvider />
+        </div>
 
         <div className="">
           <Footer />

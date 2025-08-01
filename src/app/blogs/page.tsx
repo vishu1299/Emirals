@@ -135,7 +135,12 @@ const PaginationEllipsis = () => (
 export default function BlogPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  const [isVisible, setIsVisible] = useState(false);
   const postsPerPage = 6;
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   const blogPosts = [
     {
@@ -364,9 +369,15 @@ export default function BlogPage() {
         <div className="absolute top-0 right-0 w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-72 lg:h-72 xl:w-96 xl:h-96 bg-[#25c331]/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 left-0 w-16 h-16 sm:w-24 sm:h-24 md:w-40 md:h-40 lg:w-60 lg:h-60 xl:w-80 xl:h-80 bg-[#25c331]/8 rounded-full blur-2xl animate-pulse delay-1000"></div>
 
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative z-10">
-          <div className="text-center">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 lg:mb-8">
+        <div className="max-w-7xl mt-8 mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative z-10">
+          <div
+            className={`text-center transition-all duration-1000 ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
+            }`}
+          >
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 lg:mb-8 animate-slide-up">
               <span className="text-white relative">
                 Our Blog
                 <div className="absolute -bottom-0.5 sm:-bottom-1 md:-bottom-2 left-1/2 transform -translate-x-1/2 w-12 sm:w-16 md:w-20 lg:w-24 h-0.5 sm:h-0.5 md:h-1 bg-gradient-to-r from-[#25c331] to-transparent rounded-full"></div>
@@ -374,7 +385,10 @@ export default function BlogPage() {
             </h1>
 
             {/* Breadcrumb */}
-            <div className="flex items-center justify-center gap-1.5 sm:gap-2 text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 md:mb-12 lg:mb-16">
+            <div
+              className="flex items-center justify-center gap-1.5 sm:gap-2 text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 md:mb-12 lg:mb-16 animate-slide-down"
+              style={{ animationDelay: "200ms" }}
+            >
               <Link href="/" className="hover:text-[#25c331] transition-colors">
                 Home
               </Link>
@@ -387,7 +401,7 @@ export default function BlogPage() {
 
       {/* Blog Content */}
       <section className="py-8 sm:py-12 lg:py-16 xl:py-20">
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 ">
           <div className="grid lg:grid-cols-4 gap-6 lg:gap-8">
             {/* Main Content */}
             <div className="lg:col-span-3">
@@ -395,7 +409,8 @@ export default function BlogPage() {
                 {currentPosts.map((post, index) => (
                   <article
                     key={index}
-                    className="bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 group hover:-translate-y-1"
+                    className="bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 group hover:-translate-y-1 animate-fade-in-up"
+                    style={{ animationDelay: `${index * 150}ms` }}
                   >
                     <div className="md:flex">
                       {/* Image */}
@@ -451,7 +466,10 @@ export default function BlogPage() {
 
               {/* Pagination */}
               {totalPages > 1 && (
-                <div className="mt-8 sm:mt-12">
+                <div
+                  className="mt-8 sm:mt-12 animate-fade-in-up"
+                  style={{ animationDelay: "800ms" }}
+                >
                   <PaginationRoot>
                     <PaginationContent>
                       <PaginationPrevious
@@ -488,9 +506,12 @@ export default function BlogPage() {
 
             {/* Sidebar */}
             <div className="lg:col-span-1">
-              <div className="space-y-6 sm:space-y-8">
+              <div
+                className="space-y-6 sm:space-y-8 animate-fade-in-up"
+                style={{ animationDelay: "300ms" }}
+              >
                 {/* Search */}
-                <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg border border-gray-100">
+                <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg border border-gray-100 animate-slide-down">
                   <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">
                     Search
                   </h3>
@@ -509,7 +530,10 @@ export default function BlogPage() {
                 </div>
 
                 {/* Categories */}
-                <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg border border-gray-100">
+                <div
+                  className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg border border-gray-100 animate-slide-up"
+                  style={{ animationDelay: "200ms" }}
+                >
                   <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">
                     All Services
                   </h3>
@@ -531,7 +555,10 @@ export default function BlogPage() {
                 </div>
 
                 {/* Recent Posts */}
-                <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg border border-gray-100">
+                <div
+                  className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg border border-gray-100 animate-fade-in-up"
+                  style={{ animationDelay: "400ms" }}
+                >
                   <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">
                     Recent Post
                   </h3>
@@ -564,7 +591,10 @@ export default function BlogPage() {
                 </div>
 
                 {/* Tags */}
-                <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg border border-gray-100">
+                <div
+                  className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg border border-gray-100 animate-slide-up"
+                  style={{ animationDelay: "600ms" }}
+                >
                   <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">
                     Tags
                   </h3>
@@ -584,6 +614,54 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
+
+      {/* Custom CSS for animations */}
+      <style jsx>{`
+        @keyframes fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes slide-down {
+          from {
+            opacity: 0;
+            transform: translateY(-20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes slide-up {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in-up {
+          animation: fade-in-up 0.8s ease-out forwards;
+        }
+
+        .animate-slide-down {
+          animation: slide-down 0.6s ease-out forwards;
+        }
+
+        .animate-slide-up {
+          animation: slide-up 0.8s ease-out forwards;
+        }
+      `}</style>
     </div>
   );
 }
