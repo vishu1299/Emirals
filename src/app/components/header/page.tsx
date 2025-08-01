@@ -94,13 +94,17 @@ export default function Navbar() {
 
                 {/* Mobile Auth Buttons */}
                 <div className="pt-3 border-t border-white/20 space-y-3">
-                  <button className="w-full bg-white/10 hover:bg-white/20 text-white border border-white/30 hover:border-white/50 py-3 px-3 rounded-lg transition-all duration-300 font-medium text-base backdrop-blur-sm">
-                    Login
-                  </button>
+                  <Link href="/auth/login">
+                    <button className="w-full bg-white/10 hover:bg-white/20 text-white border border-white/30 hover:border-white/50 py-3 px-3 rounded-lg transition-all duration-300 font-medium text-base backdrop-blur-sm">
+                      Login
+                    </button>
+                  </Link>
 
-                  <button className="w-full bg-[#25C331] hover:bg-[#1ea82a] text-white py-3 px-3 rounded-lg transition-colors duration-300 font-medium text-base shadow-lg">
-                    Sign Up
-                  </button>
+                  <Link href="/auth/signup">
+                    <button className="w-full bg-[#25C331] hover:bg-[#1ea82a] text-white py-3 px-3 rounded-lg transition-colors duration-300 font-medium text-base shadow-lg">
+                      Sign Up
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
