@@ -16,10 +16,14 @@ export default function Navbar() {
     { name: "Blogs", hasDropdown: false, href: "/blogs" },
   ];
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="absolute top-0 left-0 right-0 z-50 w-full p-2 sm:p-4">
       <div className="mx-auto max-w-[95%] sm:max-w-[90%] lg:max-w-[80%]">
-        <nav className="md:bg-white/20 backdrop-blur-md border border-white/20 rounded-xl sm:rounded-2xl px-4 sm:px-6 lg:px-8 py-3 sm:py-4 shadow-lg  ">
+        <nav className="bg-black/40 md:bg-white/20 backdrop-blur-md border border-white/20 rounded-xl sm:rounded-2xl px-4 sm:px-6 lg:px-8 py-3 sm:py-4 shadow-lg  ">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center shadow-lg flex-shrink-0">
@@ -84,7 +88,7 @@ export default function Navbar() {
               <div className="flex flex-col space-y-3">
                 {/* Navigation Items */}
                 {navItems.map((item) => (
-                  <Link key={item.name} href={item.href}>
+                  <Link key={item.name} href={item.href} onClick={closeMenu}>
                     <button className="flex items-center justify-between text-white hover:text-gray-300 transition-colors duration-200 py-3 px-3 rounded-lg hover:bg-white/10 text-left">
                       <span className="font-medium text-base">{item.name}</span>
                       {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
@@ -94,13 +98,13 @@ export default function Navbar() {
 
                 {/* Mobile Auth Buttons */}
                 <div className="pt-3 border-t border-white/20 space-y-3">
-                  <Link href="/auth/login">
+                  <Link href="/auth/login" onClick={closeMenu}>
                     <button className="w-full bg-white/10 hover:bg-white/20 text-white border border-white/30 hover:border-white/50 py-3 px-3 rounded-lg transition-all duration-300 font-medium text-base backdrop-blur-sm">
                       Login
                     </button>
                   </Link>
 
-                  <Link href="/auth/signup">
+                  <Link href="/auth/signup" onClick={closeMenu}>
                     <button className="w-full bg-[#25C331] hover:bg-[#1ea82a] text-white py-3 px-3 rounded-lg transition-colors duration-300 font-medium text-base shadow-lg">
                       Sign Up
                     </button>

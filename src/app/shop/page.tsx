@@ -275,7 +275,7 @@ export default function ShopPage() {
         <div className="absolute top-0 right-0 w-32 h-32 sm:w-48 sm:h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 bg-[#25c331]/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 left-0 w-24 h-24 sm:w-40 sm:h-40 md:w-60 md:h-60 lg:w-80 lg:h-80 bg-[#25c331]/8 rounded-full blur-2xl animate-pulse delay-1000"></div>
 
-        <div className="max-w-7xl flex justify-center items-center h-full md:h-[60vh] mx-auto px-4 sm:px-6 md:px-8 lg:px-8 relative z-10">
+        <div className="max-w-7xl mt-8 flex justify-center items-center h-full md:h-[60vh] mx-auto px-4 sm:px-6 md:px-8 lg:px-8 relative z-10">
           <div className="text-center">
             <div className="inline-block mb-6 sm:mb-8 lg:mb-10">
               <div className="bg-[#25c331]/20 backdrop-blur-sm border border-[#25c331]/30 rounded-full px-4 sm:px-6 lg:px-8 py-2 sm:py-3 text-[#25c331] font-semibold text-xs sm:text-sm tracking-wider">
@@ -292,7 +292,7 @@ export default function ShopPage() {
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl md:text-xl  text-gray-300 max-w-4xl mx-auto px-4 mb-8 sm:mb-12 lg:mb-16">
+            <p className="text-base sm:text-xl md:text-xl  text-gray-300 max-w-4xl mx-auto px-4 mb-8 sm:mb-12 lg:mb-16">
               Discover our premium collection of design services and products
             </p>
           </div>
