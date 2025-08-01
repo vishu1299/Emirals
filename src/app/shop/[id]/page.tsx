@@ -144,7 +144,7 @@ When purchasing or selling a handcrafted painting, it's essential to have a clea
             {/* Breadcrumb */}
             <div className="flex items-center justify-center gap-2 text-lg sm:text-xl text-gray-300 mb-8 sm:mb-12 lg:mb-16">
               <button
-                onClick={() => router.push("/")}
+                onClick={() => router.push("/shop")}
                 className="hover:text-[#25c331] transition-colors"
               >
                 Shop

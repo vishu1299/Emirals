@@ -54,13 +54,17 @@ export default function Navbar() {
 
             {/* Right side - Desktop Auth Buttons */}
             <div className="hidden lg:flex items-center space-x-4 flex-shrink-0">
-              <button className="bg-white/10 hover:bg-white/20 text-white border border-white/30 hover:border-white/50 px-5 xl:px-6 py-2.5 rounded-lg transition-all duration-300 font-medium text-sm xl:text-base backdrop-blur-sm">
-                Login
-              </button>
+              <Link href="/auth/login">
+                <div className="bg-white/10 hover:bg-white/20 text-white border border-white/30 hover:border-white/50 px-5 xl:px-6 py-2.5 rounded-lg transition-all duration-300 font-medium text-sm xl:text-base backdrop-blur-sm">
+                  Login
+                </div>
+              </Link>
 
-              <button className="bg-[#25C331] hover:bg-[#1ea82a] text-white px-5 xl:px-6 py-2.5 rounded-lg transition-colors duration-300 font-medium text-sm xl:text-base shadow-lg hover:shadow-xl">
-                Sign Up
-              </button>
+              <Link href="/auth/signup">
+                <button className="bg-[#25C331] hover:bg-[#1ea82a] text-white px-5 xl:px-6 py-2.5 rounded-lg transition-colors duration-300 font-medium text-sm xl:text-base shadow-lg hover:shadow-xl">
+                  Sign Up
+                </button>
+              </Link>
             </div>
 
             {/* Mobile menu button */}
