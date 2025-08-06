@@ -14,6 +14,7 @@ export default function Navbar() {
     { name: "Shop", hasDropdown: false, href: "/shop" },
     { name: "Plans", hasDropdown: false, href: "/plans" },
     { name: "Blogs", hasDropdown: false, href: "/blogs" },
+    { name: "Contact", hasDropdown: false, href: "/contact" },
   ];
 
   const closeMenu = () => {
